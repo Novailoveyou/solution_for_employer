@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #333;
+  color: #fff;
+}
+
+.container {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.chat {
+  max-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat p {
+  margin: 0;
+}
+
+.chat header {
+  min-height: 50px;
+  border: 1px solid red;
+}
+
+.chat main {
+  display: flex;
+}
+
+/* Using calc to stick footer to the bottom, 100px is footer height, and 50px is header height.  */
+
+/* There are surely ways to improve it to make it more reliable */
+
+.chat .users_list_box {
+  overflow: auto;
+  width: 200px;
+  min-height: 100px;
+  max-height: calc(100vh - 100px - 50px);
+  border: 1px solid orange;
+}
+
+.chat .users_list_box .users_list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Using calc to stick footer to the bottom */
+.chat .chat_box {
+  overflow: auto;
+  width: 100%;
+  min-height: 100%;
+  max-height: calc(100vh - 100px - 50px);
+  border: 1px solid purple;
+}
+
+.chat footer {
+  min-height: 100px;
+  overflow: hidden;
+  border: 1px solid green;
+}
